@@ -1,0 +1,20 @@
+[submodule "lib/built_z1sdk"]
+	path = lib/built_z1sdk
+	url = ../built_z1sdk
+	branch = main
+[submodule "lib/built_z1ctrl"]
+	path = lib/built_z1ctrl
+	url = ../built_z1ctrl
+	branch = main
+[submodule "tool_lib/leapmotion"]
+	path = tool_lib/leapmotion
+	url = ../leapmotion
+	branch = main
+[submodule "tool_lib/joystick"]
+	path = tool_lib/joystick
+	url = ../joystick
+	branch = main
+[submodule "tool_lib/built_lsl"]
+	path = tool_lib/built_lsl
+	url = ../built_lsl
+	branch = main
