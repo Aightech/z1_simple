@@ -94,6 +94,7 @@ else() #if not, build the target
   if (Eigen3_FOUND)
     message("-- Eigen3 library Found")
     list(APPEND EXTRA_LIBS Eigen3::Eigen)
+    list(APPEND EXTRA_INCLUDES ${Eigen3_INCLUDE_DIRS})
   else ()
     message("Couldn't find Eigen3 library")
   endif (Eigen3_FOUND)
@@ -115,6 +116,7 @@ else() #if not, build the target
     PUBLIC ${EXTRA_LIBS})
   target_include_directories(${LIB_NAME}
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    PUBLIC ${EXTRA_INCLUDES}
   )
   target_compile_options(${LIB_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror)
 
