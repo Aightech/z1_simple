@@ -90,7 +90,13 @@ else() #if not, build the target
   file(GLOB LIB_HEADERS "${CMAKE_CURRENT_SOURCE_DIR}/include/*.h" "include/*.hpp")
   list(REMOVE_ITEM LIB_HEADERS ${EXTRA_HEADERS})
 
-
+  find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+  if (Eigen3_FOUND)
+    message("-- Eigen3 library Found")
+    list(APPEND EXTRA_LIBS Eigen3::Eigen)
+  else ()
+    message("Couldn't find Eigen3 library")
+  endif (Eigen3_FOUND)
 
 
   ###### check for internet ######
